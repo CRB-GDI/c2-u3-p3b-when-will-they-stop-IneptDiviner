@@ -34,8 +34,19 @@ namespace ProgrammingAssignment2
 				// and the comment below. You can of
 				// course add more space between the
 				// comments as needed
-				
 
+				int sum=0;
+				int counting=0;
+				int value = GetValue();
+				while (counting < 25)
+				{
+					counting++;
+					sum = sum + value;
+					float average = sum/counting;
+					Console.WriteLine(counting + " " + average);
+				}
+				
+				
 				// Don't add or modify any code below
 				// this comment
 				input = Console.ReadLine();
