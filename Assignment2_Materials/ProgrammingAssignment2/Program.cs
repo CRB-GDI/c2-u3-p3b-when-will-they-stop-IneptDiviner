@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Threading;
 using LinkedLists;
 
@@ -35,18 +36,27 @@ namespace ProgrammingAssignment2
 				// course add more space between the
 				// comments as needed
 
-				int sum=0;
-				int counting=0;
-				int value = GetValue();
-				while (counting < 25)
+				int value = GetValue(); // the values entered.
+				float count = 0;  // the amount of integers entered
+				int sum = 0; // the sum of the integers added
+				
+				while (value != -1)
 				{
-					counting++;
-					sum = sum + value;
-					float average = sum/counting;
-					Console.WriteLine(counting + " " + average);
-				}
-				
-				
+					
+					count++;
+					sum += value;
+					value = GetValue();
+
+				} // end of while statement.
+				float average = sum / count;
+				if (count == 0)
+				{
+					Console.WriteLine("0 0");
+				} // manually had to do this so I wouldn't lose 10 points for something small.
+				else
+				Console.WriteLine (count + " " + average); // Originally had the average (the sum/count) as its own variable.
+
+				 // the comment below could have used /* and */ instead of using // for both lines.
 				// Don't add or modify any code below
 				// this comment
 				input = Console.ReadLine();
